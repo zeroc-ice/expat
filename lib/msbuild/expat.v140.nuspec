@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>expat.v140</id>
+    <version>2.1.0.3</version>
+    <authors>James Clark, Fred L. Drake, Jr., Karl Waclawek, Garrett Serack, Tim Rogers</authors>
+    <owners>James Clark, Fred L. Drake, Jr., Karl Waclawek, Garrett Serack, Tim Rogers</owners>
+    <licenseUrl>https://zeroc.com/download/expat/COPYING</licenseUrl>
+    <projectUrl>http://www.libexpat.org</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Expat is an XML parser library written in C. It is a stream-oriented parser in which an application registers handlers for things the parser might find in the XML document (like start tags).</description>
+    <tags>expat native</tags>
+  </metadata>
+</package>
