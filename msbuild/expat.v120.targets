@@ -16,8 +16,12 @@
         <Copy SourceFiles="$(MSBuildThisFileDirectory)\bin\$(Platform)\$(Configuration)\libexpat$(_ExpatLibSuffix).dll"
               DestinationFolder="$(OutDir)"
               SkipUnchangedFiles="true"/>
+        <Copy SourceFiles="$(MSBuildThisFileDirectory)\bin\$(Platform)\$(Configuration)\libexpat$(_ExpatLibSuffix).pdb"
+              DestinationFolder="$(OutDir)"
+              SkipUnchangedFiles="true"/>
     </Target>
     <Target Name="Expat_RemoveDlls_v120" BeforeTargets="Clean" Condition="'$(PlatformToolset)' == 'v120'">
         <Delete Files="$(OutDir)\libexpat$(_ExpatLibSuffix).dll"/>
+        <Delete Files="$(OutDir)\libexpat$(_ExpatLibSuffix).pdb"/>
     </Target>
 </Project>
