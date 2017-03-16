@@ -76,9 +76,9 @@
                      Properties="Configuration=Release;Platform=Win32;PackageDirectory=$(PackageDirectory);DefaultPlatformToolset=$(DefaultPlatformToolset)" />
             <MSBuild Projects="expat.nuget.targets"
                      Properties="Configuration=Release;Platform=x64;PackageDirectory=$(PackageDirectory);DefaultPlatformToolset=$(DefaultPlatformToolset)" />
-            <Copy SourceFiles="..\expat.h"
+            <Copy SourceFiles="..\lib\expat.h"
                   DestinationFolder="$(PackageDirectory)\build\native\include" />
-            <Copy SourceFiles="..\expat_external.h"
+            <Copy SourceFiles="..\lib\expat_external.h"
                   DestinationFolder="$(PackageDirectory)\build\native\include" />
             <Copy SourceFiles="README.$(DefaultPlatformToolset).md"
                   DestinationFiles="$(PackageDirectory)\README.md" />
