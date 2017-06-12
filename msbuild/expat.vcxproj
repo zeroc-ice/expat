@@ -44,7 +44,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)-objs.pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>COMPILED_FROM_DSP;WIN32;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -77,6 +77,11 @@
       GenerateDebugInformation supported values change from v120 to v140 and v141,
       we set it conditionally to the platform tool set.
   -->
+    <ItemDefinitionGroup>
+    <Link>
+      <GenerateDebugInformation>Yes</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(DefaultPlatformToolset)'=='v140'">
     <Link>
       <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
@@ -88,12 +93,6 @@
     <Link>
       <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-
-  <ItemDefinitionGroup Condition="'$(DefaultPlatformToolset)'=='v120'">
-    <Link>
-      <GenerateDebugInformation>Yes</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
